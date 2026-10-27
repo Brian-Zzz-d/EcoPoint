@@ -1,16 +1,23 @@
-# React + Vite
+# ♻️ EcoPoint - Aplicación Web Móvil de Reciclaje
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EcoPoint es una aplicación web móvil desarrollada para la práctica UT2 de Desarrollo de Interfaces (UI/UX). El proyecto traslada fielmente el prototipo interactivo de Figma a una implementación en React con Vite, destacando por un flujo de usuario limpio (Splash Screen animado, Login, Registro interactivo y pantalla de Éxito), soporte global para Modo Oscuro/Claro y altos estándares de accesibilidad (WCAG).
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para fines de desarrollo y pruebas.
 
-## React Compiler
+### Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Herramientas y requisitos necesarios para ejecutar el proyecto:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (versión 16.x o superior)
+- [npm](https://www.npmjs.com/) (incluido con Node.js)
+- Un navegador web moderno (Chrome, Firefox, Edge o Safari)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installing
+
+Paso a paso para configurar el entorno de desarrollo local:
+
+1. Clonar el repositorio en tu equipo local:
+   ```bash
+   git clone [https://github.com/TU_USUARIO/ecopoint.git](https://github.com/TU_USUARIO/ecopoint.git)
