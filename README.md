@@ -63,20 +63,6 @@ EcoPoint es una aplicación web móvil desarrollada para la práctica **UT2 de D
 | `/exito`    | Cuenta creada (redirige al Login)         |
 | `*`         | Error 404, ruta no encontrada             |
 
-## Estructura del proyecto
-
-```
-src/
-├── App.jsx          # Splash, cabecera, modo oscuro y rutas
-├── index.css        # Estilos globales, variables y botones
-├── main.jsx         # Punto de entrada
-└── pages/
-    ├── Login.jsx
-    ├── Register.jsx
-    ├── Success.jsx
-    └── NotFound.jsx
-```
-
 ## UX, accesibilidad y usabilidad
 
 - Modo oscuro y claro con paleta definida en variables CSS.
