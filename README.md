@@ -73,8 +73,9 @@ EcoPoint es una aplicación web móvil desarrollada para la práctica **UT2 de D
 
 ## Gestión del proyecto
 
-- Sprints (GitHub Projects / Trello): _pega aquí el enlace compartido_
-- Prototipo en Figma: _pega aquí el enlace_
+- Sprints (GitHub Projects): _pega aquí el enlace compartido_
+- Prototipo en Figma: https://www.figma.com/design/wE50QX0efAcNZGk4huhjH7/EcoPoint_BrianBarreraRomero?node-id=0-
+1&t=q0b3y0fIb5dsVBYJ-1
 
 ## Autor
 
