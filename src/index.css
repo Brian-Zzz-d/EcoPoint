@@ -1,0 +1,189 @@
+/* Importar tipografías de tu Figma: Poppins para Títulos, Inter para Texto */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap');
+
+/* Paleta Aplicación Normal */
+:root {
+  --primary-color: #2E7D32;
+  --secondary-color: #0077BD;
+  --accent-color: #9CCC65;
+  --bg-color: #F5F8F4;
+  --card-bg: #FFFFFF;
+  --text-color: #1C2824;
+  --success-color: #2E7D32;
+  --error-color: #CE2828;
+  --warning-color: #F66C00;
+  --disabled-color: #CCCCCC;
+}
+
+/* Paleta Aplicación Modo Oscuro */
+body.dark-mode {
+  --primary-color: #66BB6A;
+  --secondary-color: #4FC3F7;
+  --accent-color: #AED581;
+  --bg-color: #121A14;
+  --card-bg: #1C2420;
+  --text-color: #EBF0EA;
+  --success-color: #66BB6A;
+  --error-color: #EF5350;
+  --warning-color: #FFB74D;
+  --disabled-color: #444444;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Jerarquía de Tipografías (Figma: Poppins SemiBold) */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p, label {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Header / Barra de Navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar nav a {
+  margin-right: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content-container {
+  padding: 2rem;
+  max-width: 420px; /* Tamaño formato móvil según tu prototipo */
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* Botones con estilo exacto de Figma (Inter 16 Semibold) */
+.btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Botón Aceptar (Verde Primario) */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+/* Botón Cancelar (Bordeado) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+}
+
+/* Botón ¿Estás seguro? (Rojo Error) */
+.btn-danger {
+  background-color: var(--error-color);
+  color: #FFFFFF;
+}
+
+/* Botón Deshabilitado */
+.btn-disabled {
+  background-color: var(--disabled-color);
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* Inputs de formulario */
+input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--disabled-color);
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Notificaciones y Modales de Feedback */
+.feedback-banner {
+  padding: 12px;
+  background-color: var(--card-bg);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.modal {
+  border: 2px solid var(--error-color);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+}
+
+/* Accesibilidad (Foco Teclado) */
+button:focus-visible, a:focus-visible, input:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Animación para la barra de carga del Splash Screen */
+@keyframes splashLoading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
