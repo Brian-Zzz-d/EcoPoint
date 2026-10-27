@@ -20,4 +20,4 @@ Paso a paso para configurar el entorno de desarrollo local:
 
 1. Clonar el repositorio en tu equipo local:
    ```bash
-   git clone [https://github.com/TU_USUARIO/ecopoint.git](https://github.com/TU_USUARIO/ecopoint.git)
+   git clone [https://github.com/Brian-Zzz-d/EcoPoint.git](https://github.com/Brian-Zzz-d/EcoPoint.git)
