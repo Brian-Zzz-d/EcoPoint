@@ -1,82 +1,100 @@
 # ♻️ EcoPoint - Aplicación web móvil de reciclaje
 
-EcoPoint es una aplicación web móvil desarrollada para la práctica **UT2 de Desarrollo de Interfaces (UI/UX)**. Traslada el prototipo de Figma a una implementación en React con Vite: Splash Screen animado, Login, Registro con validación en tiempo real, pantalla de éxito, página 404, Modo Oscuro/Claro y criterios de accesibilidad (WCAG).
+EcoPoint es una aplicación web móvil de reciclaje desarrollada para **Desarrollo de Interfaces (UI/UX)**. Esta entrega añade **Login y Registro de usuarios con CRUD**: el frontend en React se conecta a un backend Spring Boot con base de datos MySQL.
 
 ## Tecnologías
 
-- [React 19](https://react.dev/)
-- [Vite](https://vite.dev/)
-- [React Router](https://reactrouter.com/) para la navegación entre interfaces
+**Frontend**
+- React 19 y Vite
+- React Router para la navegación entre interfaces
 - CSS con variables (tema claro y oscuro)
 
-## Getting Started
+**Backend**
+- Java con Spring Boot (Spring Web y Spring Data JPA)
+- Maven
+- MySQL (gestionado con phpMyAdmin)
 
-### Prerequisites
+## Estructura del repositorio
 
-- [Node.js](https://nodejs.org/) 18 o superior
-- npm (incluido con Node.js)
-- Un navegador moderno (Chrome, Firefox, Edge o Safari)
+| Carpeta | Contenido |
+|---------|-----------|
+| `src/` | Frontend React (`pages/`, `services/authService.js`) |
+| `Backend/EcoPoint - Base de datos/EcoPoint/` | Backend Spring Boot (Controller, Model, Repository) |
+| `Backend/EcoPoint - Base de datos/prueba.http` | Pruebas de los endpoints |
 
-### Installing
+## Cómo ejecutarlo
 
-1. Clona el repositorio:
+### Requisitos
+- Node.js 18 o superior
+- Java 17 o superior
+- MySQL (XAMPP o similar) con phpMyAdmin
 
-   ```bash
-   git clone https://github.com/Brian-Zzz-d/EcoPoint.git
-   ```
+### 1. Base de datos
+1. Arranca MySQL.
+2. Crea la base de datos `ecopoint` (tabla de usuarios: `usuarios`).
 
-2. Entra en la carpeta del proyecto:
+### 2. Backend
+1. Abre la carpeta `Backend/EcoPoint - Base de datos/EcoPoint` en IntelliJ.
+2. Revisa en `src/main/resources/application.properties` el usuario y la contraseña de tu MySQL.
+3. Ejecuta `EcoPointApplication`. El servidor queda en `http://localhost:8080`.
 
-   ```bash
-   cd EcoPoint
-   ```
-
-3. Instala las dependencias:
-
-   ```bash
-   npm install
-   ```
-
-4. Arranca el servidor de desarrollo:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Abre en el navegador la dirección que indica la consola (normalmente `http://localhost:5173`).
+### 3. Frontend
+```bash
+git clone https://github.com/Brian-Zzz-d/EcoPoint.git
+cd EcoPoint
+npm install
+npm run dev
+```
+Abre la dirección que indica la consola (normalmente `http://localhost:5173`).
 
 ### Otros comandos
 
-| Comando           | Descripción                          |
-| ----------------- | ------------------------------------ |
-| `npm run build`   | Genera la versión de producción      |
+| Comando | Descripción |
+|---------|-------------|
+| `npm run build` | Genera la versión de producción |
 | `npm run preview` | Previsualiza la versión de producción |
-| `npm run lint`    | Revisa el código con ESLint          |
+| `npm run lint` | Revisa el código con ESLint |
 
 ## Navegación (rutas)
 
-| Ruta        | Pantalla                                  |
-| ----------- | ----------------------------------------- |
-| `/`         | Splash Screen y después Login             |
-| `/login`    | Iniciar sesión                            |
-| `/registro` | Crear cuenta                              |
-| `/exito`    | Cuenta creada (redirige al Login)         |
-| `*`         | Error 404, ruta no encontrada             |
+| Ruta | Pantalla |
+|------|----------|
+| `/` | Splash Screen y después Login |
+| `/login` | Iniciar sesión |
+| `/registro` | Crear cuenta |
+| `/exito` | Cuenta creada (redirige al Login) |
+| `/ayuda` | Ayuda |
+| `/home` | Inicio / zona logueada |
+| `*` | Error 404, ruta no encontrada |
+
+## Registro y Login (CRUD de usuarios)
+
+- **Registro**: el formulario valida los campos (obligatorios, formato de correo, longitud de contraseña). El servicio comprueba en el backend si el correo ya existe y, si no, guarda el usuario en la tabla `usuarios`. Se muestra un mensaje de cuenta creada o de correo ya registrado.
+- **Login**: se comprueban las credenciales contra el backend. Si son correctas, se guarda la sesión en `sessionStorage` y se accede a la zona logueada. Si no, se muestra un mensaje de error.
+- **Servicio**: `src/services/authService.js` conecta React con la API.
+
+### Endpoints de usuarios
+
+| Método | Ruta | Descripción |
+|--------|------|-------------|
+| POST | `/usuarios/...` | Registrar un usuario |
+| POST | `/usuarios/...` | Iniciar sesión |
+
+Las pruebas de los endpoints están en `Backend/EcoPoint - Base de datos/prueba.http`.
 
 ## UX, accesibilidad y usabilidad
 
 - Modo oscuro y claro con paleta definida en variables CSS.
 - Etiquetas `label` asociadas a cada campo del formulario.
 - Foco visible al navegar con teclado.
-- Mensajes de feedback: errores de campos obligatorios, formato de correo, confirmación antes de cancelar el registro y aviso de cuenta creada.
+- Mensajes de feedback: campos obligatorios, formato de correo, correo ya registrado, cuenta creada y errores de acceso.
 - Diseño pensado para formato móvil.
 
 ## Gestión del proyecto
 
-- GitHub: https://github.com/Brian-Zzz-d/EcoPoint.git
+- GitHub: https://github.com/Brian-Zzz-d/EcoPoint
 - Sprints (GitHub Projects): https://github.com/users/Brian-Zzz-d/projects/4
-- Prototipo en Figma: https://www.figma.com/design/wE50QX0efAcNZGk4huhjH7/EcoPoint_BrianBarreraRomero?node-id=0-
-1&t=q0b3y0fIb5dsVBYJ-1
+- Prototipo en Figma: https://www.figma.com/design/wE50QX0efAcNZGk4huhjH7/EcoPoint_BrianBarreraRomero
 
 ## Autor
 
