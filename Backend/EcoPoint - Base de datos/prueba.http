@@ -1,0 +1,5 @@
+### 1. Registro (debe dar 201)
+POST http://localhost:8080/api/usuarios
+Content-Type: application/json
+
+{"nombre":"Ana","correo":"ana@test.com","cp":"35001","contrasena":"123"}
